@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<title>표</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<table>
+			<tr><th>이름</th><th>점수</th></tr>
+			<tr><td>이순신</td><td>80</td></tr>
+			<tr><td>홍길동</td><td>70</td></tr>
+			<tr><td>강감찬</td><td>60</td></tr>
+		</table><br>
+		<table border="1" width="40%">
+			<tr><td>이름</td><td>이순신</td></tr>
+			<tr><td>취미</td><td>복싱</td></tr>
+			<tr><td>나이</td><td>20</td></tr>
+		</table><br>
+		<table width="40%" cellpadding="5">
+			<tr><td>이름</td><td><input type="text"></td></tr>
+			<tr><td>취미</td><td><input type="text"></td></tr>
+			<tr><td>나이</td><td><input type="text"></td></tr>
+			<tr>
+				<td><input type="button" value="취소"></td>
+				<td><input type="button" value="저장"></td>
+			</tr>
+		</table><br>
+		<table border="1" cellpadding="3">
+			<tr><td>1</td><td>1-1</td></tr>
+			<tr><td rowspan="2">2</td><td>2-1</td></tr>
+			<tr><td>2-2</td></tr>
+		</table><br>
+		<table border="1" cellpadding="3">
+			<tr><td>1</td><td colspan="2">2</td></tr>
+			<tr><td>1-1</td><td>2-1</td><td>2-2</td></tr>
+		</table><br>
+		<table border="1" width="40%">
+			<tr><td>가</td><td>나</td><td>다</td><td rowspan="4">라</td></tr>
+			<tr><td>마</td><td rowspan="3" colspan="2">바</td></tr>
+			<tr><td>사</td></tr>
+			<tr><td>아</td></tr>
+			<tr><td colspan="2">자</td><td colspan="2">차</td></tr>
+			<tr><td colspan="4">카</td></tr>
+		</table>
+	</body>
+</html>
