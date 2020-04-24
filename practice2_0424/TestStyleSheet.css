@@ -1,0 +1,17 @@
+p1 {
+	color: red;
+	background-color: yellow;
+	width: 100px;
+	height: 50px;
+}
+p2 {
+	color: red;
+	width: 100px;
+	height: 50px;
+}
+p3 {
+	background-color: yellow;
+	width: 100px;
+	height: 50px;
+}
+h1 {color:blue;}
