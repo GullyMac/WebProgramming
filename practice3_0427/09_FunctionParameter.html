@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>인수의 개수가 적거나 많을 경우</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<script>
+			function add() {
+				return 1;
+			}
+			function add(x) {
+				return x+1;
+			}
+			function add(x, y) {
+				return x+y;
+			}
+			function add(x, y, z) {
+				return x+y+z;
+			}
+			var r0=add();
+			var r1=add(1);
+			var r2=add(2, 3);
+			var r3=add(4, 5, 6);
+			var r4=add(7, 8, 9, 10);
+			document.write("함수 호출 인자 없음 : " + r0 + "<p/>");
+			document.write("함수 호출 인자 부족 : " + r1 + "<p/>");
+			document.write("함수 호출 인자 부족 : " + r2 + "<p/>");
+			document.write("정상적인 함수 호출 : " + r3 + "<p/>");
+			document.write("7,8,9만 인자값으로 적용 : " + r4 + "<p/>");
+		</script>
+	</body>
+</html>

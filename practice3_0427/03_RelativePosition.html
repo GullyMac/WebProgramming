@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>상대위치</title>
+		<meta charset="UTF-8">
+		<style>
+			body {
+				font-weight: bold; font-size: 12pt;
+			}
+			.sp1 {
+				position: static;
+				top: 100px;
+				background-color: cyan;
+				width: 400px; height: 50px;
+			}
+			.sp2 {
+				position: relative;
+				left: 30px; top: -10px;
+				background-color: orange;
+				width: 400px; height: 50px;
+			}
+			.sp3 {
+				position: relative;
+				left: 60px; top: 20px;
+				background-color: lightgreen;
+				width: 400px; height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>positioning style 2</h1>
+		<p class="sp1">정적 위치 설정 적용</p>
+		<div class="sp2">상대 위치 설정 적용 1 - left 30px top -10px</div>
+		<p class="sp3">상대 위치 설정 적용 2 - left 60px top 20px</p>
+	</body>
+</html>

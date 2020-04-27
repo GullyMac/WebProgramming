@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>로그인</title>
+		<meta charset="UTF-8">
+		<script>
+			function LoginProcess() {
+				var userId = document.getElementById("userId").value;
+				var userPwd1 = document.getElementById("userPwd1").value;
+				var userPwd2 = document.getElementById("userPwd2").value;
+				if (userId == "") {
+					alert("아이디를 입력해주세요.");
+					return false;
+				}
+				if (userPwd1 == "") {
+					alert("비밀번호를 입력해주세요.");
+					return false;
+				}
+				if (userPwd1 != userPwd2) {
+					alert("입력한 비밀번호가 다릅니다.");
+					return false;
+				}
+				if (userId == "test" && userPwd1 == "1234"){
+                    alert("로그인되었습니다.");
+					return true;
+                } 
+                else
+                {
+                    alert("로그인 정보를 다시확인해주세요.");
+					return false;
+				}
+			}
+		</script>
+		<style>
+			.dog {
+				width: 150px; height: 170px;
+				margin: 60px auto;
+				background-color: orange;
+				transition: all ease 1s; <!-- 부드럽게 움직임 -->
+			}
+			.dog:hover {
+				transform: rotate(360deg);
+			}
+		</style>
+	</head>
+	<body>
+		<table style="background-color: #f0f0f0;">
+			<tr align="center">
+				<td colspan="2"><img class="dog" src="dog2.jpg"></td>
+			</tr>
+				<td>아이디 : </td>
+				<td><input type="text" name="userId" id="userId" size="8"></td>
+			<tr>
+				<td>비밀번호 : </td>
+				<td><input type="password" name="userPwd1" id="userPwd1" size="8"></td>
+			</tr>
+			<tr>
+				<td>비밀번호 확인 : </td>
+				<td><input type="password" name="userPwd2" id="userPwd2" size="8"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="button" value="Login" onclick="LoginProcess();"></td>
+			</tr>
+		</table>
+	</body>
+</html>

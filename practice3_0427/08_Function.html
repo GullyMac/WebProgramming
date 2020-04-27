@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>함수 호출</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<script>
+			//var text1 = "함수 선언 전 호출";
+			//var text2 = "함수 선언 후 호출";
+			//printMsg(text1);
+			//function printMsg(msg) { 
+			//	document.write("함수 호출 메세지 : " + msg + "<br>");
+			//}
+			//printMsg(text2);
+			
+			function printMsg(name, age) {
+				document.write("학생 이름 : <b>" + name + "</b><br>");
+				document.write("학생 나이 : <b>" + age + "</b><br>");	
+			}
+		</script>
+		<button type="button" onclick="printMsg('홍길동', 21)">학생 정보</button>
+	</body>
+</html>
