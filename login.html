@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>login</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+		.myform {
+			width: 100px;
+		}
+		.tableform {
+				background-color: #8977ad;
+				color: white;
+			}
+		</style>
+		<script type="text/javascript">
+			function CheckLogin(){
+				var userId = document.getElementById("userId").value;
+				var userPwd = document.getElementById("userPwd").value;
+				if(userId == "") {
+					alert("아이디를 입력하세요.");
+					return false;
+				}
+				if(userPwd == "") {
+					alert("비밀번호를 입력하세요.");
+					return false;
+				}
+				if(userId != "test" || userPwd != "1234"){
+					alert("로그인 정보를 확인해주세요.");
+					return false;
+				}
+				if(userId == "test" && userPwd == "1234") {
+					alert("로그인 성공");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h2>회원 로그인</h2>
+		<table class="tableform">
+			<tr>
+				<td>아이디 :&nbsp;</td>
+				<td><input type="text" name="userId" id="userId" class="myform"></td>
+			</tr>
+			<tr>
+				<td>비밀번호 :&nbsp;</td>
+				<td><input type="password" name="userPwd" id="userPwd" class="myform"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<input type="button" value="로그인" onclick="CheckLogin();"></td>
+			</tr>
+		</table>
+	</body>
+</html>

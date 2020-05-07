@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RegisterForm</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+		.myform1 {
+			width: 180px;
+		}
+		.myform2 {
+			width: 240px;
+		}
+		.myform3 {
+			width: 60px;
+		}
+		.birthform::placeholder {
+			color: black;
+		}
+		.tableform {
+			background-color: #8977ad;
+			color: white;
+		}
+		</style>
+		<script type="text/javascript">
+			function CheckLogin(){
+				var userNm = document.getElementById("userNm").value;
+				var userId = document.getElementById("userId").value;
+				var userPwd1 = document.getElementById("userPwd1").value;
+				var userPwd2 = document.getElementById("userPwd2").value;
+				if(userNm == "") {
+					alert("이름을 입력하세요.");
+					return false;
+				}
+				if(userId == "") {
+					alert("아이디를 입력하세요.");
+					return false;
+				}
+				if(userPwd1 == "") {
+					alert("비밀번호를 입력하세요.");
+					return false;
+				}
+				if(userPwd1 != userPwd2) {
+					alert("비밀번호와 비밀번호 확인이 다릅니다.");
+					return false;
+				}
+				alert("회원가입 완료");
+			}
+		</script>
+	</head>
+	<body>
+		<h2>회원 가입</h2>
+		<form>
+		<table class="tableform">
+			<tr>
+				<td>이름 :&nbsp;</td>
+				<td><input type="text" placeholder="이름을 입력하세요." name="userNm" id="userNm" class="myform1"></td>
+			</tr>
+			<tr>
+				<td>아이디 :&nbsp;</td>
+				<td><input type="text" placeholder="아이디를 입력하세요." name="userId" id="userId" class="myform2"></td>
+			</tr>
+			<tr>
+				<td>비밀번호 :&nbsp;</td>
+				<td><input type="password" placeholder="비밀번호를 입력하세요." name="userPwd1" id="userPwd1" class="myform2"></td>
+			</tr>
+			<tr>
+				<td>비밀번호 확인 :&nbsp;</td>
+				<td><input type="password" placeholder="비밀번호 확인을 입력하세요." name="userPwd2" id="userPwd2" class="myform2"></td>
+			</tr>
+			<tr>
+				<td>이메일 :&nbsp;</td>
+				<td><input type="text" name="email" class="myform1"></td>
+			</tr>
+			<tr>
+				<td>성별 :&nbsp;</td>
+				<td><input type="radio" name="sex">남자<input type="radio" name="sex">여자</td>
+			</tr>
+			<tr>
+				<td>전화번호 : &nbsp;</td>
+				<td><input type="text" name="phone1" class="myform3">-<input type="text" name="phone2" class="myform3">-<input type="text" name="phone3" class="myform3"></td>
+			</tr>
+			<tr>
+				<td>핸드폰 : &nbsp;</td>
+				<td>
+					<select>
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="018">018</option>
+					</select>-<input type="text" name="hp2" class="myform3">-<input type="text" name="hp3" class="myform3">
+				</td>
+			</tr>
+			<tr>
+				<td>홈페이지: &nbsp;</td>
+				<td><input type="text" name="homepage" class="myform1"></td>
+			</tr>
+			<tr>
+				<td>생일 : &nbsp;</td>
+				<td><input type="text" placeholder="연도-월-일" name="birthday" class="birthform"></td>
+			</tr>
+			<tr>
+				<td>좋아하는 색깔 : &nbsp;</td>
+				<td><input type="color" name="color" value="#000000"></td>
+			</tr>
+			<tr>
+				<td>관심분야: &nbsp;</td>
+				<td>
+					<input type="checkbox" name="interest" value="ec">경제
+					<input type="checkbox" name="interest" value="it">IT
+					<input type="checkbox" name="interest" value="so">사회
+					<input type="checkbox" name="interest" value="sc">과학
+					<input type="checkbox" name="interest" value="ms">음악
+					<input type="checkbox" name="interest" value="ar">미술
+				</td>
+			</tr>
+			<tr>
+				<td>하고 싶은 말</td>
+				<td><textarea cols="40"></textarea></td>
+			</tr>
+			<tr>
+				<td>
+				<input type="submit" value="확인" onclick="CheckLogin();">
+				<input type="reset" value="취소">
+				</td>
+			</tr>
+		</table>
+		</form>
+	</body>
+</html>
