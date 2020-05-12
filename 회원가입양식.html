@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>회원가입양식</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+		.myform1 {
+			width: 150px;
+		}
+		.myform2 {
+			width: 70px;
+		}
+		.myform3 {
+			width: 50px;
+		}
+		.tableform {
+			background-color: #eeeeee;
+			width: 330px;
+			height: 330px;
+			margin: auto;
+		}
+		</style>
+		<script type="text/javascript">
+			function CheckId(){
+				var userId = document.getElementById("userId").value;
+				if (userId == "test") {
+					alert("존재하는 아이디입니다.");
+					return false;
+				}
+				alert("사용 가능한 아이디입니다.");
+			}
+			function CheckLogin(){
+				var userId = document.getElementById("userId").value;
+				var userPwd1 = document.getElementById("userPwd1").value;
+				var userPwd2 = document.getElementById("userPwd2").value;
+				if(userId == "") {
+					alert("아이디를 입력하세요.");
+					return false;
+				}
+				if(userPwd1 == "") {
+					alert("비밀번호를 입력하세요.");
+					return false;
+				}
+				if(userPwd1 != userPwd2) {
+					alert("비밀번호와 비밀번호 확인이 다릅니다.");
+					return false;
+				}
+				alert("회원가입 완료");
+			}
+		</script>
+	</head>
+	<body>
+		<h2><center>회원가입</center></h2>
+		<form>
+		<table class="tableform">
+			<tr>
+				<td>ID :&nbsp;</td>
+				<td><input type="text" name="userId" id="userId" class="myform1"></td>
+				<td><input type="button" value="중복확인" onclick="CheckId();">
+				</td>
+			</tr>
+			<tr>
+				<td>비 번 :&nbsp;</td>
+				<td><input type="password" name="userPwd1" id="userPwd1" class="myform1"></td>
+			</tr>
+			<tr>
+				<td>비번확인 :&nbsp;</td>
+				<td><input type="password" name="userPwd2" id="userPwd2" class="myform1"></td>
+			</tr>
+			<tr>
+				<td>이 름 :&nbsp;</td>
+				<td><input type="text" name="name" class="myform1"></td>
+			</tr>
+			<tr>
+				<td>주민번호 : &nbsp;</td>
+				<td colspan="2"><input type="text" name="jumin1" class="myform2">-<input type="text" name="jumin2" class="myform2"></td>
+			</tr>
+			<tr>
+				<td>전화번호 : &nbsp;</td>
+				<td colspan="2"><input type="text" name="phone1" class="myform3">-<input type="text" name="phone2" class="myform3">-<input type="text" name="phone3" class="myform3"></td>
+			</tr>
+			<tr>
+				<td>주 소 :&nbsp;</td>
+				<td><input type="text" name="address" class="myform1"></td>
+			</tr>
+			<tr>
+				<td>직업 : &nbsp;</td>
+				<td>
+					<select>
+						<option value="">==선택==</option>
+						<option value="직업1">직업1</option>
+						<option value="직업2">직업2</option>
+						<option value="직업3">직업3</option>
+					</select>
+				</td>
+			</tr>
+			<tr align="center">
+				<td colspan="3">
+				<input type="submit" value="등록" onclick="CheckLogin();">
+				<input type="reset" value="취소">
+				</td>
+			</tr>
+		</table>
+		</form>
+	</body>
+</html>
