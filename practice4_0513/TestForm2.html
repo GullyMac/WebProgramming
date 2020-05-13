@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+function CheckForm(){
+	var userId = 
+		document.forms[0].userId.value;
+	var userId2 =
+		document.getElementById("userId").value;
+	alert(userId + ", " + userId2);
+}
+</script>
+</head>
+<body>
+	<form action="testFormProcess.jsp" method="get">
+	<input type="text" name="userId" id="userId"><br>
+	<input type="password" name="userPwd" id="userPwd">
+	<br>
+	<input type="password" name="userPwdConfirm"
+	id="userPwdConfirm"><br>
+	<input type="button" value="Login" 
+	onclick="CheckForm();">
+	</form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>회원가입</title>
+	<script>
+		function CheckForm(){
+			var radioArr = document.getElementsByName("gender");
+			var checkGender = false;
+			for (var jnx=0; jnx < radioArr.length; jnx++){
+				//alert(radioArr[jnx].value);
+				//alert(radioArr[jnx].checked);
+				if (radioArr[jnx].checked){
+					checkGender = true;
+				}
+			}
+			if (checkGender == false){
+				alert("성별을 선택해주세요.");
+				return false;
+			}
+			
+			var checkArr = document.getElementsByName("hobby");
+			var checkHobby = 0;
+			for (var jnx=0; jnx < checkArr.length; jnx++){
+				if (checkArr[jnx].checked){
+					checkHobby += 1;
+				}
+			}
+			if (checkHobby < 2){
+				alert("취미를 2가지 이상 선택해주세요.")
+				return false;
+			}
+			alert("로그인 성공")
+		}
+	</script>
+</head>
+<body>
+	<form name="myForm" action="TestForm3Process.jsp" method="get">
+		아이디 : <input type="text" name="userId" id="userId"><br>
+		암호 : <input type="password" name="userPwd" id="userPwd"><br>
+		암호확인 : <input type="password" name="userPwdConfirm" id="userPwdConfirm"><br>
+		남녀구분 : 
+		남<input type="radio" name="gender" value="male"> 
+		여<input type="radio" name="gender" value="female"><br>
+		취미: 
+		농구<input type="checkbox" name="hobby" value="basketball"> 
+		야구<input type="checkbox" name="hobby" value="baseball">
+		탁구<input type="checkbox" name="hobby" value="pingpong"><br>
+		<input type="button" value="가입" onclick="CheckForm();">&nbsp;
+		<input type="reset" value="초기화">
+	</form>
+</body>
+</html>

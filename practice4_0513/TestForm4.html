@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>제이쿼리</title>
+	<script src="jquery-3.5.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				if ($("#userId").val() == ""){
+					alert("아이디를 입력해주세요.");
+					$("#userId").focus();
+					return false;
+				}
+				if ($("#userPwd").val() == ""){
+					alert("비밀번호를 입력해주세요.");
+					$("#userPwd").focus();
+					return false;
+				}
+				alert("Click Button");
+			})
+		})
+	</script>
+</head>
+<body>
+	<form>
+		아이디 : <input type="text" name="userId" id="userId"><br>
+		암호 : <input type="password" name="userPwd" id="userPwd"><br>
+		암호확인 : <input type="password" name="userPwdConfirm" id="userPwdConfirm"><br>
+		남녀구분 : 
+		남<input type="radio" name="gender" value="male"> 
+		여<input type="radio" name="gender" value="female"><br>
+		취미: 
+		농구<input type="checkbox" name="hobby" value="basketball"> 
+		야구<input type="checkbox" name="hobby" value="baseball">
+		탁구<input type="checkbox" name="hobby" value="pingpong"><br>
+		<button>가입</button>&nbsp;
+		<input type="reset" value="초기화">
+	</form>
+</body>
+</html>
