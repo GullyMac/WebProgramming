@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>로그인</title>
+	<script>
+		function CheckForm(){
+			var id = document.getElementById("userId").value;
+			var pwd = document.getElementById("userPwd").value;
+			var pwdcf = document.getElementById("userPwdConfirm").value;
+			
+			if (id == ""){
+				alert("아이디를 입력해주세요.");
+				return false;
+			}
+			if (pwd == ""){
+				alert("암호를 입력해주세요.");
+				return false;
+			}
+			if (pwd != pwdcf){
+				alert("암호와 암호확인이 일치하지 않습니다.");
+				return false;
+			}
+			alert("로그인 성공");
+		}
+	</script>
+</head>
+<body>
+	<form action="loginProcess" method="post" onsubmit="return CheckForm()">
+	<table>
+		<tr>
+			<td>아이디 : </td>
+			<td><input type="text" name="userId" id="userId"></td>
+		</tr>
+		<tr>
+			<td>암호 : </td>
+			<td><input type="password" name="userPwd" id="userPwd"></td>
+		</tr>
+		<tr>
+			<td>암호확인 : </td>
+			<td><input type="password" name="userPwdConfirm" id="userPwdConfirm"></td>
+		</tr>
+		<tr>
+			<td>남녀구분 : </td>
+			<td>남<input type="radio" name="gender" value="남자" checked> 
+				여<input type="radio" name="gender" value="여자"></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="submit" value="가입">
+							<input type="reset" value="초기화"></td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>
